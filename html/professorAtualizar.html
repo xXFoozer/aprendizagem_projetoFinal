@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Professores/style_professor_atualizar.css">
+    <script src="/scripts/Professores_scripts/professor_atualizar.js" defer></script>
+    <title>Atualizar Professores</title>
+</head>
+
+<body>
+    <div class="side-bar">
+        <div class="btns-org">
+            <button class="travelling-btns" id="voltar">Voltar</button>
+            <button class="travelling-btns active" id="cadastrar">Atualizar</button>
+        </div>
+    </div>
+    <main class="container">
+        <div class="order-box">
+            <div class="edit-header">
+                <div class="header">
+                    <h1>Atualizar Professores</h1>
+                </div>
+            </div>
+            <div class="consult-id">
+                <div class="order-consult">
+                    <label for="codProfessor" >Código de Identificação:</label>
+                    <input type="text" id="codProfessor" name="codProfessor" required>
+                </div>
+                <button class="query-btn" id="consultar">Consultar</button>
+            </div>
+            <div class="form-data">
+                <div class="register-data">
+                    <label for="nome">Nome do Professor:</label>
+                    <input type="text" id="nome" name="nomeProfessor" required>
+
+                    <label for="sobrenome">Sobrenome do Professor:</label>
+                    <input type="text" id="sobrenome" name="sobrenomeProfessor" required>
+
+                    <label for="matricula">Matrícula do Professor:</label>
+                    <input type="text" id="matricula" name="matriculaProfessor" required>
+
+                    <label for="telefone">Telefone do Professor:</label>
+                    <input type="text" id="telefone" name="telefoneProfessor" required>
+
+                    <label for="email">Email do Professor:</label>
+                    <input type="text" id="email" name="emailProfessor" required>
+                </div>
+                <button class="register-btns" id="atualizar">Atualizar</button>
+                <div id="res"></div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
