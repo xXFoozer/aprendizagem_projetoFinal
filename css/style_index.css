@@ -6,22 +6,23 @@
 
 body{
     background-color: #f6f6f6;
+    display: flex;
+    flex-direction:row ;
 }
 
 .container{
-    display: flex;
-    flex-direction: row;
+    text-align: center;
 }
 
 .edit-header{
     width: 100vw;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin: 10px auto;
 }
 
 .header{
-    width: 700px;
+    width: 900px;
     height: 100px;
     background-color: #454045;
     border-radius: 16px;
@@ -35,19 +36,31 @@ body{
 }
 
 .side-bar{
-    width: 358px;
+    width: 300px;
     height: 100vh;
     background-color: #df8100;
     box-shadow: 8px 0px 2px 0px rgba(87,87,87,0.58);
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
+    padding-top: 50px;
+}
+
+.resolver{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; 
+    margin-top: 32px;
 }
 
 .btns-org{
     display: flex;
     flex-direction: column;
-    gap: 210px;
+    gap: 90px;
+    width: 400px;
+    justify-content: center; 
+    align-items: center;
 }
 
 .travelling-btns{
@@ -62,10 +75,43 @@ body{
     box-shadow: 8px 8px 1px 0px rgba(46,46,46,0.58);
 }
 
+.travelling-btns.active {
+    background-color: #f8a900;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
 .travelling-btns:hover{
     background-color: #df8100;
     border: 2px solid #000000;
     color: #000000;
     transition: 0.7s;
-    opacity: 0.8;
+
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    gap: 8px; 
+}
+
+.option-btns{
+    width: 232px;
+    height: 52px;
+    color: #df8100;
+    background-color: #454045;
+    border: 2px solid #f8e15f;
+    border-radius: 8px;
+    font-size: larger;
+    cursor: pointer;
+    box-shadow: 8px 8px 1px 0px rgba(46,46,46,0.58);
+}
+
+.option-btns:hover{
+    background-color: #df8100;
+    border: 2px solid #000000;
+    color: #000000;
+    transition: 0.7s;
+
 }
