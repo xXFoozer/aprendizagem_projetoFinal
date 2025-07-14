@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Saidas/style_saida_consultar.css">
+    <script src="/scripts/Saidas_scripts/saida_consultar.js"defer></script>
+    <title>Consulta de Saídas</title>
+</head>
+<body>
+    <div class="side-bar">
+        <div class="btns-org">
+            <button class="travelling-btns" id="voltar">Voltar</button>
+            <button class="travelling-btns active" id="cadastrar">Consultar</button>
+        </div>
+    </div>
+    <main class="container">
+       <div class="order-box">
+           <div class="edit-header">
+               <div class="header">
+                   <h1>Consulta de Saídas</h1>
+               </div>
+           </div>
+           <div class="form-data">
+                <div class="register-data">
+                    <label for="codSaida">Código de Identificação:</label>
+                    <input type="text" id="codSaida" name="codSaida" required>
+                </div>
+                <button class="register-btns" id="consultar">Consultar</button>
+           </div>
+           <div id="res"></div>
+       </div>
+    </main>
+</body>
+</html>

@@ -4,6 +4,3 @@ document.getElementById('alunos').addEventListener("click",()=>{
 document.getElementById('professores').addEventListener("click",()=>{
     window.location.href = '/html/professor.html'
 })
-document.getElementById('saidas').addEventListener("click",()=>{
-    window.location.href = '/html/saidas.html'
-})

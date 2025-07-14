@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Saidas/style_saida_atualizar.css">
+    <script src="/scripts/Saidas_scripts/saida_atualizar.js" defer></script>
+    <title>Atualizar Saídas</title>
+</head>
+
+<body>
+    <div class="side-bar">
+        <div class="btns-org">
+            <button class="travelling-btns" id="voltar">Voltar</button>
+            <button class="travelling-btns active" id="cadastrar">Atualizar</button>
+        </div>
+    </div>
+    <main class="container">
+        <div class="order-box">
+            <div class="edit-header">
+                <div class="header">
+                    <h1>Atualizar Saídas</h1>
+                </div>
+            </div>
+            <div class="consult-id">
+                <div class="order-consult">
+                    <label for="codSaida" >Código de Identificação:</label>
+                    <input type="text" id="codSaida" name="codSaida" required>
+                </div>
+                <button class="query-btn" id="consultar">Consultar</button>
+            </div>
+            <div class="form-data">
+                <div class="register-data">
+                    <label for="dataSolicitacao">Data de Solicitacao:</label>
+                    <input type="text" id="dataSolicitacao" name="dataSolicitacao" readonly>
+
+                    <label for="motivo">Motivo da Saída( No maxímo 60 caracteres):</label>
+                    <input type="text" id="motivo" name="motivo" required maxlength="60">
+
+                    <label for="destino">Local de Destino:</label>
+                    <select name="destino" id="destino">
+                        <option value="biblioteca">Biblioteca</option>
+                        <option value="banheiro">Banheiro</option>
+                        <option value="coordenacao">Coordenação</option>
+                        <option value="cantina">Cantina</option>
+                    </select>
+
+                    <label for="status">Status:</label>
+                    <input type="text" id="status" name="status" value="Pendente" readonly>
+
+                    <label for="horaSaida">Hora de Saída:</label>
+                    <input type="text" id="horaSaida" name="horaSaida" readonly>
+
+                    <label for="nomeProfessor">Nome do Professor:</label>
+                    <input type="text" id="nomeProfessor" name="nomeProfessor" required>
+
+                    <label for="codProfessor">Código do Professor:</label>
+                    <input type="text" id="codProfessor" name="codProfessor" required>
+                    
+                    <label for="nomeAluno">Nome do Aluno:</label>
+                    <input type="text" id="nomeAluno" name="nomeAluno" required>
+                  
+                    <label for="codAluno">Código do Aluno:</label>
+                    <input type="text" id="codAluno" name="codAluno" required>
+                </div>
+                <button class="register-btns" id="atualizar">Atualizar</button>
+                <div id="res"></div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
