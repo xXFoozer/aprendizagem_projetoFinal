@@ -61,10 +61,10 @@ btn_update.addEventListener("click", () => {
         motivo: document.getElementById("motivo").value,
         localDestino: document.getElementById("destino").value,
         status: document.getElementById("status").value,
-        nomeProfessor: document.getElementById("nomeProfessor").value,
-        professor_cod: parseInt(document.getElementById("codProfessor").value),
-        nomeAluno: document.getElementById("nomeAluno").value,
-        aluno_cod: parseInt(document.getElementById("codAluno").value),
+        // nomeProfessor: document.getElementById("nomeProfessor").value,
+        // professor_cod: parseInt(document.getElementById("codProfessor").value),
+        // nomeAluno: document.getElementById("nomeAluno").value,
+        // aluno_cod: parseInt(document.getElementById("codAluno").value),
         horaSaida: horaSaidaOriginal // preserva a hora original
     };
 

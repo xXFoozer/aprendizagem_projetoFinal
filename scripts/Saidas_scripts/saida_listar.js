@@ -1,56 +1,64 @@
 let res = document.getElementById('res')
 let btn = document.getElementById('listar')
 
-btn.addEventListener('click',()=>{
+btn.addEventListener('click', () => {
 
-    fetch(`http://localhost:8081/professor`)
+
+    fetch(`http://localhost:8081/saida`)
         .then(response => {
             if (!response.ok) {
-                throw new Error("Erro ao Listar Professor")
+                throw new Error("Erro ao buscar saída");
             }
-            return response.json()
+            return response.json();
         })
         .then(data => {
-            if (data.length === 0) {
-                res.innerHTML = "<p style='color:gray;'>Nenhum professor encontrado.</p>";
+            if (!Array.isArray(data) || data.length === 0) {
+                res.innerHTML = "<p style='color:gray;'>Nenhuma saída encontrada.</p>";
                 return;
             }
-    
+        
             let html = `
                 <table border="1" cellpadding="10" cellspacing="0">
                     <tr>
                         <th>ID</th>
-                        <th>Nome</th>
-                        <th>Sobrenome</th>
-                        <th>Matrícula</th>
-                        <th>Telefone</th>
-                        <th>Email</th>
+                        <th>Data Solicitação</th>
+                        <th>Hora de Saída</th>
+                        <th>Hora de Retorno</th>
+                        <th>Motivo</th>
+                        <th>Destino</th>
+                        <th>Status</th>
+                        <th>Nome do Responsável</th>
+                        <th>Nome do Aluno</th>
                     </tr>
             `;
-    
-            data.forEach(professor => {
+        
+            data.forEach(saida => {
                 html += `
                     <tr>
-                        <td>${professor.codProfessor}</td>
-                        <td>${professor.nome}</td>
-                        <td>${professor.sobrenome}</td>
-                        <td>${professor.matricula}</td>
-                        <td>${professor.telefone}</td>
-                        <td>${professor.email}</td>
+                        <td>${saida.codSaida}</td>
+                        <td>${saida.dataSolicitacao}</td>
+                        <td>${saida.horaSaida || '-'}</td>
+                        <td>${saida.horaRetorno || '-'}</td>
+                        <td>${saida.motivo}</td>
+                        <td>${saida.localDestino}</td>
+                        <td>${saida.status}</td>
+                        <td>${saida.nomeProfessor}</td>
+                        <td>${saida.nomeAluno}</td>
                     </tr>
                 `;
             });
-    
-            html += "</table>";
+        
+            html += `</table>`;
             res.innerHTML = html;
         })
         .catch(error => {
             console.error("Erro:", error);
-            res.innerHTML = `<p style="color:red;">Erro ao buscar professores.</p>`;
+            res.innerHTML = `<p style="color:red;">Erro ao buscar saída.</p>`;
         });
+
 })
 
 
 document.getElementById('voltar').addEventListener("click", () => {
-    window.location.href = '/html/professor.html'
+    window.location.href = '/html/index.html'
 })
