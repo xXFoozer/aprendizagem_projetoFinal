@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const dto = {
                         dataSolicitacao: row.cells[1].textContent,
                         horaSaida: formatarHora(row.cells[2].textContent),
-                        horaRetorno: formatarHora(row.cells[3].textContent),
+                        horaRetorno: null,
                         motivo: row.cells[4].textContent,
                         localDestino: row.cells[5].textContent,
                         status: "Reprovado",
