@@ -18,6 +18,7 @@ btn.addEventListener('click', () => {
             }
         
             let html = `
+            <div class="tabela-scroll">
                 <table border="1" cellpadding="10" cellspacing="0">
                     <tr>
                         <th>ID</th>
@@ -48,7 +49,7 @@ btn.addEventListener('click', () => {
                 `;
             });
         
-            html += `</table>`;
+            html += `</table></div>`;
             res.innerHTML = html;
         })
         .catch(error => {

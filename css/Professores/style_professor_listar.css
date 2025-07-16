@@ -172,7 +172,6 @@ input{
 }
 
 #res table {
-    margin-top: 150px;
     width: 920px;
     border-collapse: collapse;
     background-color: #fff;
@@ -189,3 +188,8 @@ input{
     padding: 8px;
     text-align: center;
 }
+.tabela-scroll {
+    margin-top: 150px;
+    height: 400px;   
+    overflow-y: auto;       
+  }
