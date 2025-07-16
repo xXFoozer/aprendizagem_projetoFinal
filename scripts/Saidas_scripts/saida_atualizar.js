@@ -94,5 +94,5 @@ btn_update.addEventListener("click", () => {
 
 // Botão voltar
 document.getElementById('voltar').addEventListener("click", () => {
-    window.location.href = '/html/index.html';
+    window.location.href = '../../index.html'
 });

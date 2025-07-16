@@ -54,5 +54,5 @@ btn.addEventListener('click', () => {
 
 // Botão de voltar
 document.getElementById('voltar').addEventListener("click", () => {
-    window.location.href = '/html/index.html'
+    window.location.href = '../../index.html'
 })

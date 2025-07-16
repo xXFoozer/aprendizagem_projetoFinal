@@ -61,5 +61,5 @@ btn.addEventListener('click', () => {
 
 
 document.getElementById('voltar').addEventListener("click", () => {
-    window.location.href = '/html/index.html'
+    window.location.href = '../../index.html'
 })
