@@ -6,7 +6,7 @@ btn_consult.addEventListener('click', async () => {
     const id = document.getElementById("codAluno").value
 
     if (!id) {
-        document.getElementById("res").innerText = "";
+        res.innerHTML = `<p style="color:red;">Informe o ID do aluno para atualizar.</p>`;
         return;
     }
 
@@ -67,11 +67,15 @@ btn_update.addEventListener("click", function () {
             if (!response.ok) {
                 throw new Error("Erro ao atualizar aluno");
             }
+            if (response.status === 204) {
+                return {};
+            }
             return response.json();
         })
         .then(data => {
             res.innerHTML = `<p style="color:green;">Aluno atualizado com sucesso! ID: ${data.codAluno}</p>`;
             res.style.color = '#13a200';
+            console.log("Atualizado:", aluno);
         })
         .catch(error => {
             console.error("Erro:", error);

@@ -35,5 +35,5 @@ btn.addEventListener('click', () => {
 
 // Botão de voltar
 document.getElementById('voltar').addEventListener("click", () => {
-    window.location.href = '/html/Professor.html'
+    window.location.href = '/html/professor.html'
 })
