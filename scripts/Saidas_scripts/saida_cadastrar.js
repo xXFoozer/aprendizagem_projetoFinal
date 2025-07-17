@@ -20,6 +20,7 @@ btn.addEventListener('click', () => {
     const saida = {
         dataSolicitacao: document.getElementById('dataSolicitacao').value,
         horaSaida: getHoraAtual(),
+        horaRetorno: null,
         motivo: document.getElementById('motivo').value,
         localDestino: document.getElementById('destino').value,
         status: document.getElementById('status').value,

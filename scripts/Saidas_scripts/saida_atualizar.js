@@ -20,12 +20,14 @@ btn_consult.addEventListener('click', async () => {
 
        
         horaSaidaOriginal = saida.horaSaida || null;
+        horaRetornoOriginal = saida.horaRetorno || null;
         
      
         document.getElementById("dataSolicitacao").value = saida.dataSolicitacao || "";
         document.getElementById("motivo").value = saida.motivo || "";
         document.getElementById("destino").value = saida.localDestino || "";
         document.getElementById("status").value = saida.status || "";
+        document.getElementById("horaSaida").value = saida.horaSaida || "";
         document.getElementById("nomeProfessor").value = saida.nomeProfessor || "";
         document.getElementById("codProfessor").value = saida.professor?.codProfessor || "";
         document.getElementById("nomeAluno").value = saida.nomeAluno || "";
@@ -65,7 +67,8 @@ btn_update.addEventListener("click", () => {
         // professor_cod: parseInt(document.getElementById("codProfessor").value),
         // nomeAluno: document.getElementById("nomeAluno").value,
         // aluno_cod: parseInt(document.getElementById("codAluno").value),
-        horaSaida: horaSaidaOriginal // preserva a hora original
+        horaSaida: horaSaidaOriginal, // preserva a hora original
+        horaRetorno: horaSaidaOriginal // preserva a hora original
     };
 
     fetch(`http://localhost:8081/saida/${id}`, {

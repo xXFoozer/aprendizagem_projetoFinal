@@ -95,12 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     const dto = {
                         dataSolicitacao: row.cells[1].textContent,
                         horaSaida: formatarHora(row.cells[2].textContent),
-                        horaRetorno: null,
-                        motivo: row.cells[4].textContent,
-                        localDestino: row.cells[5].textContent,
+                        horaRetorno: null, 
+                        motivo: row.cells[3].textContent,
+                        localDestino: row.cells[4].textContent,
                         status: "Aprovado",
-                        nomeProfessor: row.cells[7].textContent,
-                        nomeAluno: row.cells[8].textContent,
+                        nomeProfessor: row.cells[6].textContent,
+                        nomeAluno: row.cells[7].textContent,
 
                     };
 
@@ -135,11 +135,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         dataSolicitacao: row.cells[1].textContent,
                         horaSaida: formatarHora(row.cells[2].textContent),
                         horaRetorno: getHoraAtual(),
-                        motivo: row.cells[4].textContent,
-                        localDestino: row.cells[5].textContent,
+                        motivo: row.cells[3].textContent,
+                        localDestino: row.cells[4].textContent,
                         status: "Retornado",
-                        nomeProfessor: row.cells[7].textContent,
-                        nomeAluno: row.cells[8].textContent,
+                        nomeProfessor: row.cells[6].textContent,
+                        nomeAluno: row.cells[7].textContent,
 
                     };
 
@@ -171,12 +171,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         dataSolicitacao: row.cells[1].textContent,
                         horaSaida: formatarHora(row.cells[2].textContent),
                         horaRetorno: null,
-                        motivo: row.cells[4].textContent,
-                        localDestino: row.cells[5].textContent,
-                        status: "Reprovado",
-                        nomeProfessor: row.cells[7].textContent,
-                        nomeAluno: row.cells[8].textContent,
-
+                        motivo: row.cells[3].textContent,
+                        localDestino: row.cells[4].textContent,
+                        status: "Aprovado", 
+                        nomeProfessor: row.cells[6].textContent,
+                        nomeAluno: row.cells[7].textContent,
                     };
 
                     // console.log('depois de passar',dto)
